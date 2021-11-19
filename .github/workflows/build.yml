@@ -5,12 +5,12 @@ on:
     branches: [ main ]
     paths:
       - 'resume.yml'
-      - 'picture.png'
+      - 'picture.jpg'
   pull_request:
     branches: [ main ]
     paths:
       - 'resume.yml'
-      - 'picture.png'
+      - 'picture.jpg'
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
       - name: Build HTML file
         run: |
           mkdir docs
-          yaml-resume export resume.yml -e html -t material -i picture.png -o index
+          yaml-resume export resume.yml -e html -t material -i picture.jpg -o index
       - name: Commit
         run: |
           git add index.html
