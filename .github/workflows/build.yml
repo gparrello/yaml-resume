@@ -6,11 +6,13 @@ on:
     paths:
       - 'resume.yml'
       - 'picture.jpg'
+      - '.github/workflows/**'
   pull_request:
     branches: [ main ]
     paths:
       - 'resume.yml'
       - 'picture.jpg'
+      - '.github/workflows/**'
 
 jobs:
   build:
