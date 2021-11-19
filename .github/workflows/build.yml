@@ -32,7 +32,7 @@ jobs:
           yaml-resume export resume.yml -e html -t material -i picture.jpg -o index
       - name: Commit
         run: |
-          git add index.html
+          git add index.html picture.jpg
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m 'deploy'
