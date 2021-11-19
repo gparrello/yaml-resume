@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install requirements
-	run: pip install -r requirements.txt
+      	run: pip install -r requirements.txt
 
       - name: Validate YAML
-        run: yaml-resume validate resume.yml
+      	run: yaml-resume validate resume.yml
 
       - name: Build HTML file
-	run: yaml-resume export resume.yml -e html -t material -i picture.png -o html/index
+      	run: yaml-resume export resume.yml -e html -t material -i picture.png -o html/index
