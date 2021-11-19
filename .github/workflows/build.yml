@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.9.7'
           architecture: 'x64'
-      - name: install deps
+      - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Validate YAML
         run: yaml-resume validate resume.yml
