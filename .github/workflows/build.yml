@@ -3,10 +3,14 @@ name: CD
 on:
   push:
     branches: [ main ]
-    paths: 'resume.yml'
+    paths:
+      - 'resume.yml'
+      - 'picture.png'
   pull_request:
     branches: [ main ]
-    paths: 'resume.yml'
+    paths:
+      - 'resume.yml'
+      - 'picture.png'
 
 jobs:
   build:
