@@ -12,9 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install requirements
-      	run: pip install -r ./requirements.txt
+      - uses: actions/setup-python@v2
+      	with:
+      	  python-version: '3.9.7'
+      	  architecture: 'x64'
+      - name: install deps
+      	run: pip install -r requirements.txt
       - name: Validate YAML
-      	run: yaml-resume validate ./resume.yml
+      	run: yaml-resume validate resume.yml
       - name: Build HTML file
-      	run: yaml-resume export ./resume.yml -e html -t material -i ./picture.png -o ./html/index
+      	run: yaml-resume export resume.yml -e html -t material -i picture.png -o html/index
