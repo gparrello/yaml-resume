@@ -25,7 +25,9 @@ jobs:
           python-version: '3.9.7'
           architecture: 'x64'
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
       - name: Validate YAML
         run: yaml-resume validate resume.yml
       - name: Build HTML file
